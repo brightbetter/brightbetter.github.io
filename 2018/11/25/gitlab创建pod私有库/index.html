@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="tool,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="code++,money++">
-<meta name="keywords" content="iOS">
-<meta property="og:type" content="website">
-<meta property="og:title" content="bright&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="一. 必须理解的两个概念 code repository是代码仓库，我们把包代码上传到这个仓库。 spec repository是配置仓库，所有的配置按照包名、版本号分门别类的存放在这个仓库。这个仓库只用来存放spec文件，不存放代码。  二. 创建代码仓库 本地创建GQNotificationBanner工程 gitlab创建同名远程仓库 将本地工程和远程仓库关联 创建podspec文件，官方配">
+<meta name="keywords" content="tool">
+<meta property="og:type" content="article">
+<meta property="og:title" content="gitlab创建pod私有库">
+<meta property="og:url" content="http://yoursite.com/2018/11/25/gitlab创建pod私有库/index.html">
 <meta property="og:site_name" content="bright&#39;s blog">
-<meta property="og:description" content="code++,money++">
+<meta property="og:description" content="一. 必须理解的两个概念 code repository是代码仓库，我们把包代码上传到这个仓库。 spec repository是配置仓库，所有的配置按照包名、版本号分门别类的存放在这个仓库。这个仓库只用来存放spec文件，不存放代码。  二. 创建代码仓库 本地创建GQNotificationBanner工程 gitlab创建同名远程仓库 将本地工程和远程仓库关联 创建podspec文件，官方配">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-25T07:40:58.601Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="bright&#39;s blog">
-<meta name="twitter:description" content="code++,money++">
+<meta name="twitter:title" content="gitlab创建pod私有库">
+<meta name="twitter:description" content="一. 必须理解的两个概念 code repository是代码仓库，我们把包代码上传到这个仓库。 spec repository是配置仓库，所有的配置按照包名、版本号分门别类的存放在这个仓库。这个仓库只用来存放spec文件，不存放代码。  二. 创建代码仓库 本地创建GQNotificationBanner工程 gitlab创建同名远程仓库 将本地工程和远程仓库关联 创建podspec文件，官方配">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2018/11/25/gitlab创建pod私有库/">
 
 
 
 
 
-  <title>bright's blog</title>
+  <title>gitlab创建pod私有库 | bright's blog</title>
   
 
 
@@ -144,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -218,9 +218,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -250,9 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/25/gitlab创建pod私有库/" itemprop="url">gitlab创建pod私有库</a></h1>
+          <h1 class="post-title" itemprop="name headline">gitlab创建pod私有库</h1>
         
 
         <div class="post-meta">
@@ -302,9 +300,7 @@
       
 
       
-        
-          
-            <h2 id="一-必须理解的两个概念"><a href="#一-必须理解的两个概念" class="headerlink" title="一. 必须理解的两个概念"></a>一. 必须理解的两个概念</h2><ol>
+        <h2 id="一-必须理解的两个概念"><a href="#一-必须理解的两个概念" class="headerlink" title="一. 必须理解的两个概念"></a>一. 必须理解的两个概念</h2><ol>
 <li>code repository是代码仓库，我们把包代码上传到这个仓库。</li>
 <li>spec repository是配置仓库，所有的配置按照包名、版本号分门别类的存放在这个仓库。这个仓库只用来存放spec文件，不存放代码。</li>
 </ol>
@@ -359,8 +355,6 @@
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">import os</span><br><span class="line">import shutil</span><br><span class="line">import copy</span><br><span class="line">import sys  </span><br><span class="line"></span><br><span class="line">name = &apos;GQNotificationBanner&apos;</span><br><span class="line">filepath = &apos;./&apos;+name+&apos;.podspec&apos;</span><br><span class="line">file = open(filepath,&apos;r+&apos;)</span><br><span class="line">flist = file.readlines()</span><br><span class="line">inlist = []</span><br><span class="line">newtag = &apos;&apos;</span><br><span class="line">des = &apos;&apos; + sys.argv[1]</span><br><span class="line"></span><br><span class="line">for line in flist:</span><br><span class="line">	k  = line.strip()</span><br><span class="line">	if k.startswith(&apos;s.version&apos;):</span><br><span class="line">		strlist = k.split(&apos;=&apos;)</span><br><span class="line">		nowtag = strlist[1].strip(&apos; \n&quot;\&apos;&apos;)</span><br><span class="line">		tagList = nowtag.split(&apos;.&apos;)</span><br><span class="line">		increaseNum = int(tagList[-1])+1</span><br><span class="line">		for i in range(0,len(tagList)-1):</span><br><span class="line">			newtag = newtag + tagList[i]+&apos;.&apos;</span><br><span class="line">		newtag = newtag +str(increaseNum)</span><br><span class="line">		newline = &apos;  s.version      = &apos;+ &apos;&quot;&apos;+newtag+&apos;&quot;\n&apos;</span><br><span class="line">		inlist.append(newline)</span><br><span class="line">	else:</span><br><span class="line">		inlist.append(line)</span><br><span class="line">file.close()</span><br><span class="line"></span><br><span class="line">file = open(filepath,&apos;w+&apos;)</span><br><span class="line">file.writelines(inlist)</span><br><span class="line">file.close()</span><br><span class="line"></span><br><span class="line">specfilepath = os.path.expanduser(&apos;~&apos;)+&apos;/.cocoapods/repos/yourspecname/&apos;+name+&apos;/&apos;+newtag</span><br><span class="line">os.mkdir(specfilepath)</span><br><span class="line">shutil.copyfile(filepath,specfilepath+&apos;/&apos;+name+&apos;.podspec&apos;)</span><br><span class="line"></span><br><span class="line">curdir = os.getcwd()</span><br><span class="line">poddir = os.path.expanduser(&apos;~&apos;)+&apos;/.cocoapods/repos/yourspecname/&apos;</span><br><span class="line">os.system(&apos;git pull&apos;)</span><br><span class="line">os.system(&apos;git commit -a -m &quot;tag:&apos;+newtag+&apos; des:&apos;+des+&apos;&quot;&apos;)</span><br><span class="line">os.system(&apos;git push&apos;)</span><br><span class="line">os.system(&apos;git tag -a &quot;&apos;+ newtag+&apos;&quot; -m &quot;&apos;+newtag+&apos;&quot;&apos;)</span><br><span class="line">os.system(&apos;git push origin &quot;&apos;+newtag+&apos;&quot;&apos;)</span><br><span class="line">os.chdir(poddir) </span><br><span class="line"># os.system(&apos;cd &apos;+str(poddir))</span><br><span class="line">os.system(&apos;git pull&apos;)</span><br><span class="line">os.system(&apos;git add .&apos;)</span><br><span class="line">os.system(&apos;git commit -m &quot;&apos;+name+&apos; tag:&apos;+newtag+&apos; des:&apos;+des+&apos;&quot;&apos;)</span><br><span class="line">os.system(&apos;git push&apos;)</span><br><span class="line">os.system(&apos;cd &apos;+str(curdir))</span><br><span class="line">os.chdir(curdir) </span><br><span class="line">print (&apos;done!&apos;)</span><br></pre></td></tr></table></figure>
 
-          
-        
       
     </div>
     
@@ -370,19 +364,54 @@
     
 
     
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>Donate comment here</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="bright WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="bright Alipay">
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
 
     
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/tool/" rel="tag"># tool</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -392,10 +421,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -403,6 +433,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -423,8 +457,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -477,6 +520,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-必须理解的两个概念"><span class="nav-number">1.</span> <span class="nav-text">一. 必须理解的两个概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-创建代码仓库"><span class="nav-number">2.</span> <span class="nav-text">二. 创建代码仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三-创建spec仓库"><span class="nav-number">3.</span> <span class="nav-text">三. 创建spec仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四-其他说明"><span class="nav-number">4.</span> <span class="nav-text">四. 其他说明</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -623,6 +682,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
